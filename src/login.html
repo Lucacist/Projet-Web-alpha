@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/variable.css" />
     <link rel="stylesheet" href="style/login.css" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg" />
     <title>Page de login</title>
   </head>
   <body>
@@ -23,8 +24,8 @@
         </div>
         <form action="test.html" method="get">
           <div class="bloc-input">
-            <label for="">Adresse mail <input type="email" required /></label
-            ><label for=""
+            <label for="">Adresse mail <input type="email" required /></label>
+            <label for=""
               >Mot de passe <input type="password" required
             /></label>
           </div>
@@ -57,16 +58,25 @@
               onclick="toggleFields('entreprise')"
             />
             <label for="entreprise">Entreprise</label>
+
+            <input
+              type="radio"
+              id="pilote"
+              name="userType"
+              value="pilote"
+              onclick="toggleFields('pilote')"
+            />
+            <label for="pilote">Pilote</label>
           </div>
 
           <div id="etudiantFields" class="dynamic-fields">
             <div class="_2bloc">
-              <label for="">Prénom <input type="text" required /></label
-              ><label for="">Nom <input type="text" required /></label>
+              <label for="">Prénom <input type="text" required /></label>
+              <label for="">Nom <input type="text" required /></label>
             </div>
             <div class="_2bloc">
-              <label for="">Adresse mail <input type="email" required /></label
-              ><label for=""
+              <label for="">Adresse mail <input type="email" required /></label>
+              <label for=""
                 >Mot de passe <input type="password" required
               /></label>
             </div>
@@ -79,12 +89,26 @@
               /></label>
             </div>
             <div class="_2bloc">
-              <label for="">Adresse mail <input type="email" required /></label
-              ><label for=""
+              <label for="">Adresse mail <input type="email" required /></label>
+              <label for=""
                 >Mot de passe <input type="password" required
               /></label>
             </div>
           </div>
+
+          <div id="piloteFields" class="dynamic-fields">
+            <div class="_2bloc">
+              <label for="">Nom <input type="text" required /></label>
+              <label for="">Prénom <input type="text" required /></label>
+            </div>
+            <div class="_2bloc">
+              <label for="">Adresse mail <input type="email" required /></label>
+              <label for=""
+                >Mot de passe <input type="password" required
+              /></label>
+            </div>
+          </div>
+
           <div class="cookie">
             <input
               type="checkbox"
@@ -93,17 +117,18 @@
               value=""
               required
             />
-            <label for="cookie"
-              ><span class="cookie-label"
+            <label for="cookie">
+              <span class="cookie-label"
                 >J'accepte les <a href="CGU.html" class="soulignage">CGU</a> et
-                déclare avoir pris connaissance de la </span
-              ><span class="cookie-label"
-                ><a href="politique-donnees.html" class="soulignage"
+                déclare avoir pris connaissance de la
+              </span>
+              <span class="cookie-label">
+                <a href="politique-donnees.html" class="soulignage"
                   >politique de protection des données</a
                 >
                 du site</span
-              ></label
-            >
+              >
+            </label>
           </div>
           <button type="submit">S'inscrire</button>
         </form>
@@ -135,17 +160,25 @@
     function toggleFields(userType) {
       let etudiantFields = document.getElementById("etudiantFields");
       let entrepriseFields = document.getElementById("entrepriseFields");
+      let piloteFields = document.getElementById("piloteFields");
+
+      etudiantFields.style.display = "none";
+      entrepriseFields.style.display = "none";
+      piloteFields.style.display = "none";
+
+      disableFields(etudiantFields, true);
+      disableFields(entrepriseFields, true);
+      disableFields(piloteFields, true);
 
       if (userType === "etudiant") {
         etudiantFields.style.display = "flex";
-        entrepriseFields.style.display = "none";
-        disableFields(entrepriseFields, true);
         disableFields(etudiantFields, false);
-      } else {
-        etudiantFields.style.display = "none";
+      } else if (userType === "entreprise") {
         entrepriseFields.style.display = "flex";
-        disableFields(etudiantFields, true);
         disableFields(entrepriseFields, false);
+      } else if (userType === "pilote") {
+        piloteFields.style.display = "flex";
+        disableFields(piloteFields, false);
       }
     }
 
