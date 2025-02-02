@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap");
+
+:root {
+  --couleur-body: #f6f6f6;
+  --couleur-container: #fff;
+  --couleur-input-border: #606060;
+  --couleur-texte: #000;
+  --couleur-backtexte: #edf1ff;
+  --couleur-sous-texte: #ffffff95;
+  --couleur-button: #000;
+  --texte-button: #fff;
+  --taille-texte: 20px;
+  --couleur-cesi: 255, 251, 15;
+}
+
+body {
+  background-color: var(--couleur-body);
+  color: var(--couleur-texte);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.stagelink {
+  font-family: "Kalnia";
+}
