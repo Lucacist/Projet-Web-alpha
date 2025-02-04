@@ -25,8 +25,7 @@ section {
 .bloc2,
 .bloc3,
 .bloc4,
-.bloc5,
-.bloc6 {
+.bloc5 {
   width: 48%;
   height: 150px;
   border-radius: 10px;
@@ -52,8 +51,7 @@ section {
 .icone2,
 .icone3,
 .icone4,
-.icone5,
-.icone6 {
+.icone5 {
   display: flex;
   background-color: var(--couleur-rose);
   border-radius: 100px;
