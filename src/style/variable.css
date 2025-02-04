@@ -9,6 +9,12 @@
   --couleur-sous-texte: #ffffff95;
   --couleur-button: #000;
   --texte-button: #fff;
+  --couleur-rose: #f2e9ff;
+  --couleur-bleu: #edf1ff;
+  --couleur-orange: #fcdf9d;
+  --couleur-vert: #d4f4dd;
+  --couleur-violet: #e5d0ff;
+  --couleur-gris: #f5f5f5;
 }
 
 body {

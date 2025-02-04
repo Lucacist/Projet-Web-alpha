@@ -1,0 +1,85 @@
+section {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  padding: 0 40px;
+  gap: 20px;
+}
+.activer {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+.contain,
+.contain2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contain2 {
+  flex-direction: row-reverse;
+}
+.bloc1,
+.bloc2,
+.bloc3,
+.bloc4,
+.bloc5 {
+  width: 48%;
+  height: 150px;
+  border-radius: 10px;
+  background-color: var(--couleur-rose);
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.iphone {
+  height: 200px;
+  transform: translateY(-50px);
+}
+.iphone2 {
+  height: 130px;
+  transform: translateY(-50px);
+}
+.svg {
+  width: 48px;
+}
+.icone,
+.icone2,
+.icone3,
+.icone4,
+.icone5 {
+  display: flex;
+  background-color: var(--couleur-rose);
+  border-radius: 100px;
+  padding: 20px;
+  width: fit-content;
+}
+.bloc2,
+.icone2 {
+  background-color: var(--couleur-bleu);
+}
+.bloc3,
+.icone3 {
+  background-color: var(--couleur-orange);
+}
+.bloc4,
+.icone4 {
+  background-color: var(--couleur-vert);
+}
+.contexte {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.titre {
+  font-size: 25px;
+}
+.texte {
+  font-size: 18px;
+}
