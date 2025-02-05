@@ -33,11 +33,27 @@ header {
   flex-direction: column;
   gap: 20px;
 }
+header a {
+  color: var(--couleur-texte);
+  text-decoration: none;
+}
+header a:hover {
+  color: #00000066;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
 .first-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+.activer {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
 }
 header .stagelink {
   font-size: 32px;
@@ -86,6 +102,47 @@ nav {
   margin: 0 auto;
   gap: 20px;
 }
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  width: 80vw;
+  margin: 30px auto;
+  border-radius: 10px;
+  gap: 30px;
+}
+footer .titre {
+  font-size: 20px;
+  text-align: center;
+}
+.texte-footer {
+  font-size: 14px;
+}
+.foot-contain {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.mentions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.equipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--couleur-texte);
+}
 @media screen and (max-width: 600px) {
   header .stagelink {
     font-size: 25px;
@@ -109,6 +166,14 @@ nav {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 700px) {
+  footer .titre {
+    font-size: 18px;
+  }
+  .texte-footer {
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 500px) {
   .first-bar {
     gap: 10px;
@@ -130,8 +195,14 @@ nav {
   nav {
     font-size: 12px;
   }
+  footer .titre {
+    font-size: 15px;
+  }
+  .texte-footer {
+    font-size: 10px;
+  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   header {
     padding: 10px;
   }
