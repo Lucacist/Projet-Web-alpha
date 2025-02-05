@@ -87,3 +87,40 @@ section {
 .texte {
   font-size: 18px;
 }
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  width: 80vw;
+  margin: 30px auto;
+  border-radius: 10px;
+  gap: 30px;
+}
+footer .titre {
+  font-size: 20px;
+  text-align: center;
+}
+.texte-footer {
+  font-size: 14px;
+}
+.foot-contain {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.mentions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.equipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
