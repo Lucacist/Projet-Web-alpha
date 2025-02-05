@@ -197,6 +197,7 @@ ul {
   }
   section {
     gap: 40px;
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 500px) {
