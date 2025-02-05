@@ -37,6 +37,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 header .stagelink {
   font-size: 32px;
@@ -55,6 +56,7 @@ header .stagelink {
 }
 .nom-compte {
   color: var(--texte-button);
+  text-wrap: nowrap;
 }
 header input {
   border: 0;
@@ -83,4 +85,54 @@ nav {
   display: flex;
   margin: 0 auto;
   gap: 20px;
+}
+@media screen and (max-width: 600px) {
+  header .stagelink {
+    font-size: 25px;
+  }
+  header form {
+    height: 32.4px;
+  }
+  .compte {
+    height: 34px;
+  }
+  .nom-compte {
+    font-size: 12px;
+  }
+  header img {
+    width: 14px;
+  }
+  header input {
+    font-size: 10px;
+  }
+  nav {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .first-bar {
+    gap: 10px;
+  }
+  .nom-compte {
+    font-size: 10px;
+  }
+  header .stagelink {
+    font-size: 20px;
+  }
+  header form {
+    height: 26.4px;
+    padding: 0 10px;
+  }
+  .compte {
+    height: 28px;
+    padding: 0 10px;
+  }
+  nav {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    padding: 10px;
+  }
 }

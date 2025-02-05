@@ -124,3 +124,128 @@ ul {
   flex-direction: column;
   gap: 10px;
 }
+@media screen and (max-width: 1000px) {
+  .iphone {
+    height: 150px;
+  }
+  .iphone2 {
+    height: 100px;
+  }
+  .svg {
+    width: 30px;
+  }
+  .bloc1,
+  .bloc2,
+  .bloc3,
+  .bloc4,
+  .bloc5 {
+    height: 120px;
+    margin-top: 120px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .iphone {
+    height: 120px;
+  }
+  .iphone2 {
+    height: 70px;
+    transform: translateY(-40px);
+  }
+  .svg {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .titre {
+    font-size: 20px;
+  }
+  .texte {
+    font-size: 14px;
+  }
+  .svg {
+    width: 20px;
+  }
+  .icone,
+  .icone2,
+  .icone3,
+  .icone4,
+  .icone5 {
+    padding: 15px;
+  }
+  footer .titre {
+    font-size: 18px;
+  }
+  .texte-footer {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .iphone {
+    height: 90px;
+  }
+  .iphone2 {
+    height: 50px;
+    transform: translateY(-40px);
+  }
+  .bloc1,
+  .bloc2,
+  .bloc3,
+  .bloc4,
+  .bloc5 {
+    height: 80px;
+    margin-top: 80px;
+  }
+  section {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .iphone {
+    height: 70px;
+    transform: translateY(-30px);
+  }
+  .iphone2 {
+    height: 40px;
+    transform: translateY(-30px);
+  }
+  .bloc1,
+  .bloc2,
+  .bloc3,
+  .bloc4,
+  .bloc5 {
+    height: 60px;
+    margin-top: 80px;
+  }
+  .titre {
+    font-size: 17px;
+  }
+  .texte {
+    font-size: 11px;
+  }
+  .svg {
+    width: 15px;
+  }
+  .icone,
+  .icone2,
+  .icone3,
+  .icone4,
+  .icone5 {
+    padding: 10px;
+  }
+  footer .titre {
+    font-size: 15px;
+  }
+  .texte-footer {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .iphone {
+    height: 60px;
+    transform: translateY(-30px);
+  }
+  .iphone2 {
+    height: 30px;
+    transform: translateY(-20px);
+  }
+}
