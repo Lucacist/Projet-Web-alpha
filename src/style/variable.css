@@ -143,6 +143,81 @@ footer a {
   text-decoration: none;
   color: var(--couleur-texte);
 }
+.easter-egg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+header .stagelink {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--couleur-texte);
+  border-radius: 5px;
+}
+
+.logo {
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transform: translate(100px);
+  animation: scale-in 0.8s ease-out forwards,
+    move-left 0.8s ease-out 0.1s forwards;
+}
+
+.logo-text {
+  color: var(--couleur-texte);
+  height: 10vw;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: text-appear 0.8s ease-out 1s forwards;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: scale(1) translateX(100px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes text-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1vw);
+  }
+}
 @media screen and (max-width: 600px) {
   header .stagelink {
     font-size: 25px;

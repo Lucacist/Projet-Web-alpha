@@ -9,6 +9,13 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg" />
   </head>
   <body>
+    <div class="easter-egg">
+      <img src="img/favicon.svg" alt="" class="logo" /><img
+        src="img/Frame 3 (1).svg"
+        alt=""
+        class="logo-text"
+      />
+    </div>
     <header>
       <div class="first-bar">
         <div class="stagelink">StageLink</div>
@@ -27,6 +34,7 @@
         <a href="Entreprises.html" class="pages">Entreprises</a>
       </nav>
     </header>
+
     <section>
       <div class="contain">
         <div class="bloc1">
@@ -125,4 +133,13 @@
       </div>
     </footer>
   </body>
+  <script>
+    document.querySelector(".stagelink").addEventListener("click", function () {
+      const easterEgg = document.querySelector(".easter-egg");
+      easterEgg.style.display = "flex";
+      setTimeout(() => {
+        easterEgg.style.display = "none";
+      }, 2500);
+    });
+  </script>
 </html>
