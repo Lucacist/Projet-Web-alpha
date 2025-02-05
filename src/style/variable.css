@@ -143,19 +143,6 @@ footer a {
   text-decoration: none;
   color: var(--couleur-texte);
 }
-.easter-egg {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-header .stagelink {
-  cursor: pointer;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -170,54 +157,58 @@ header .stagelink {
   background: var(--couleur-texte);
   border-radius: 5px;
 }
-
-.logo {
-  height: 10vw;
-  display: flex;
+.easter-egg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: none;
   align-items: center;
   justify-content: center;
-  transform: scale(0);
-  transform: translate(100px);
-  animation: scale-in 0.8s ease-out forwards,
-    move-left 0.8s ease-out 0.1s forwards;
+}
+
+header .stagelink {
+  cursor: pointer;
+}
+
+.logo {
+  height: 10vw; /* Taille 10x plus grande */
+  transform: scale(0) translateX(50vw); /* Démarre hors du centre */
+  animation: scale-in 1.5s ease-out 0.5s forwards;
 }
 
 .logo-text {
   color: var(--couleur-texte);
   height: 10vw;
   opacity: 0;
-  transform: translateY(100px);
-  animation: text-appear 0.8s ease-out 1s forwards;
+  transform: translateY(50px);
+  animation: text-appear 1.5s ease-out 2s forwards;
 }
 
+/* Animation d'apparition (scale) */
 @keyframes scale-in {
-  0% {
-    transform: scale(0);
+  from {
+    transform: scale(0) translateX(0);
   }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes move-left {
-  0% {
-    transform: scale(1) translateX(100px);
-  }
-  100% {
-    transform: scale(1) translateX(0);
+  to {
+    transform: scale(1) translate(0, 0);
   }
 }
 
+/* Animation du texte */
 @keyframes text-appear {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(1vw);
+    transform: translateY(20px);
   }
 }
+
 @media screen and (max-width: 600px) {
   header .stagelink {
     font-size: 25px;
